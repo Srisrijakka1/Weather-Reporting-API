@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather App</title>
+    </head>
+    <body>
+        <h1>Weather App</h1>
+
+        <form method="POST">
+            <label>Select an Option : </label>
+            <select name = "choice">
+                <option value="1">1.Get Temperature</option>
+                <option value="2">2.Get WindSpeed</option>
+                <option value="3">3.Get Pressure</option>
+            </select>
+
+            <br>
+
+            <label>Enter the date with time (year-month-date hr:min:sec) : </label>
+            <input type="text" name="target_date">
+            
+            <br>
+            
+            <button type="submit">Submit</button>
+        </form>
+        {% if result is not none %}
+            <p>Result  :{{ result}}</p>
+        {% endif %}
+        <p>Message : {{msg}}</p>
+    </body>
+</html>
